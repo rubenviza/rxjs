@@ -1,7 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const pages = ["lifecycle/index", "cancellation/index","cold_hot_observables/index", "introduction/index", "creation_functions/of/index","creation_functions/from/index"];
+const pages = ["lifecycle/index", "cancellation/index","cold_hot_observables/index", "introduction/index", "creation_functions/of/index","creation_functions/from/index","creation_functions/fromEvent/index"];
 
 module.exports = {
   devtool: 'eval-source-map',
