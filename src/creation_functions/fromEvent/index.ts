@@ -8,7 +8,7 @@ const subscription = fromEvent<MouseEvent>(triggerButton, 'click').subscribe(
 );
 
 setTimeout(() => {
-    console.log('Unsubscribe with fromEvent');
+    console.log('Unsubscribe -- fromEvent');
     subscription.unsubscribe();
 },5000);
 
@@ -27,13 +27,13 @@ const triggerClick$ = new Observable<MouseEvent>(subscriber => {
     };
 });
 
-const subs2 = triggerClick$.subscribe(
+const subscription2 = triggerClick$.subscribe(
     event => console.log("imitation: ",event.type, event.x, event.y)
 );
 
 setTimeout(() => {
-    console.log('Unsubscribe imitation');
-    subs2.unsubscribe();
+    console.log('Unsubscribe -- imitation');
+    subscription2.unsubscribe();
 },5000);
 
 //-------------------------------------------------

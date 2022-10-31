@@ -1,7 +1,9 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const pages = ["lifecycle/index", "cancellation/index","cold_hot_observables/index", "introduction/index", "creation_functions/of/index","creation_functions/from/index","creation_functions/fromEvent/index"];
+ let pages = ["lifecycle", "cancellation","cold_hot_observables", "introduction", "creation_functions/of","creation_functions/from","creation_functions/fromEvent","creation_functions/timer","creation_functions/interval","creation_functions/forkJoin","creation_functions/combineLatest","pipeable_operators/filter","pipeable_operators/map","pipeable_operators/tap","pipeable_operators/debounceTime","pipeable_operators/catchError"];
+
+pages = pages.map(item => `${item}/index`);
 
 module.exports = {
   devtool: 'eval-source-map',
